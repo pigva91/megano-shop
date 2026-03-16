@@ -43,8 +43,8 @@
 
 1. Клонируйте репозиторий  
    ```Bash
-   git clone https://github.com/pigva91/megano_project.git
-   cd megano_project
+   git clone https://github.com/pigva91/megano-shop.git
+   cd megano_shop
    
 2. Создайте и заполните файл .env (пример указан в файле `.env.example`)
 
