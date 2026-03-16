@@ -1,0 +1,375 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$lFpsvjWPU35SGmBBr1vvFk$ousITn8WQBzfTg75pCGUETIbEF9ohQG6QhlgtOaPfBo=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-02-14T08:39:22Z"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "fullName": "Администратор Системы",
+      "email": "admin@example.com",
+      "phone": "+79011001010",
+      "avatar": 1
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$lFpsvjWPU35SGmBBr1vvFk$ousITn8WQBzfTg75pCGUETIbEF9ohQG6QhlgtOaPfBo=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "test",
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "ivanov@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-15T18:05:33Z"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "fullName": "Иван Иванов",
+      "email": "ivanov@example.com",
+      "phone": "+79991009090",
+      "avatar": 2
+    }
+  },
+  {
+    "model": "profiles.avatar",
+    "pk": 1,
+    "fields": {
+      "src": "avatars/user_1/bigGoods.png",
+      "alt": "bigGoods.png"
+    }
+  },
+  {
+    "model": "profiles.avatar",
+    "pk": 2,
+    "fields": {
+      "src": "avatars/user_2/bigGoods.png",
+      "alt": "bigGoods.png"
+    }
+  },
+
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "title": "Ноутбуки и компьютеры",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "title": "Игровые ноутбуки",
+      "parent": 1
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "title": "Смартфоны",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "title": "Аксессуары",
+      "parent": 3
+    }
+  },
+  {
+    "model": "catalog.categoryimage",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "src": "catalog/categories/category_1/laptops_and_computers.png",
+      "alt": "Изображение ноутбуков и компьютеров"
+    }
+  },
+  {
+    "model": "catalog.categoryimage",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "src": "catalog/categories/category_2/gaming_laptops.png",
+      "alt": "Игровые ноутбуки"
+    }
+  },
+  {
+    "model": "catalog.categoryimage",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "src": "catalog/categories/category_3/smartphones.png",
+      "alt": "Смартфоны"
+    }
+  },
+  {
+    "model": "catalog.categoryimage",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "src": "catalog/categories/category_4/accessories.png",
+      "alt": "Аксессуары для смартфонов"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Игровой"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "2026"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 3,
+    "fields": {
+      "name": "NVIDIA"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 4,
+    "fields": {
+      "name": "5G"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "category": 2,
+      "price": "1900.00",
+      "count": 0,
+      "date": "2026-01-07T15:53:10Z",
+      "title": "ASUS ROG Strix G16 RTX 4080",
+      "description": "...",
+      "fullDescription": "...",
+      "freeDelivery": true,
+      "rating": "0.00",
+      "tags": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "category": 3,
+      "price": "1199.00",
+      "count": 45,
+      "date": "2026-01-01T07:00:10Z",
+      "title": "Apple iPhone 16 Pro 256GB",
+      "description": "Смартфон Apple iPhone 16 Pro 256GB Black",
+      "fullDescription": "Смартфон Apple iPhone 16 Pro 256GB nanoSim/eSim Black Titanium",
+      "freeDelivery": true,
+      "rating": "5.00",
+      "tags": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "price": "799.00",
+      "count": 3,
+      "date": "2026-02-02T14:18:10Z",
+      "title": "Samsung Galaxy S23 Ultra",
+      "description": "...",
+      "fullDescription": "...",
+      "freeDelivery": false,
+      "rating": "4.65",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "price": "1499.99",
+      "count": 15,
+      "date": "2026-02-01T11:00:46Z",
+      "title": "MSI Katana 15 RTX 4070",
+      "description": "...",
+      "fullDescription": "...",
+      "freeDelivery": true,
+      "rating": "4.55",
+      "tags": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "src": "catalog/products/products_1/asus.png",
+      "alt": "ASUS ROG"
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "src": "catalog/products/products_2/iphone.png",
+      "alt": "iPhone 16"
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "src": "catalog/products/products_3/samsung.png",
+      "alt": "S23 Ultra"
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 4,
+    "fields": {
+      "product": 4,
+      "src": "catalog/products/products_4/katana.png",
+      "alt": "MSI Katana"
+    }
+  },
+
+  {
+    "model": "catalog.review",
+    "pk": 1,
+    "fields": {
+      "product": 2,
+      "author": 1,
+      "email": "admin@example.com",
+      "text": "test review",
+      "rate": 5,
+      "date": "2026-02-23T10:09:00Z"
+    }
+  },
+  {
+    "model": "catalog.review",
+    "pk": 2,
+    "fields": {
+      "product": 3,
+      "author": 2,
+      "email": "ivanov@example.com",
+      "text": "did",
+      "rate": 5,
+      "date": "2026-02-28T20:10:00Z"
+    }
+  },
+
+  {
+    "model": "catalog.specification",
+    "pk": 1,
+    "fields": {
+      "product": 2,
+      "name": "Разрешение экрана",
+      "value": "1200x2600 Пикс"
+    }
+  },
+  {
+    "model": "catalog.sales",
+    "pk": 1,
+    "fields": {
+      "price": "1900.00",
+      "salePrice": "1799.99",
+      "dateFrom": "2026-02-02",
+      "dateTo": "2026-02-15",
+      "product": 1
+    }
+  },
+  {
+    "model": "catalog.sales",
+    "pk": 2,
+    "fields": {
+      "price": "1199.00",
+      "salePrice": "1099.00",
+      "dateFrom": "2026-02-02",
+      "dateTo": "2026-02-28",
+      "product": 2
+    }
+  },
+
+  {
+    "model": "basket.basket",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "product": 3,
+      "count": 2
+    }
+  },
+
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "created_at": "2026-03-07T07:50:07.862Z",
+      "full_name": "Иван Иванов",
+      "email": "ivanov@example.com",
+      "phone": "+79991009090",
+      "delivery_type": "ordinary",
+      "payment_type": "someone",
+      "total_cost": "2298.99",
+      "status": "paid",
+      "city": "Москва",
+      "address": "улица Ленина, д. 1, кв. 508"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 3,
+      "count": 1
+    }
+  }
+]
