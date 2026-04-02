@@ -11,6 +11,5 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install --no-root
 
 COPY megano .
-COPY diploma-frontend .
 
 CMD ["gunicorn", "megano.wsgi:application", "--bind", "0.0.0.0:8000"]
